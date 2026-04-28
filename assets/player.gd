@@ -77,7 +77,7 @@ func _input(event: InputEvent) -> void:
 		perspective_in_rotate = false
 		perspective_rad = self.global_rotation.y
 		perspective_size = player_camera.size
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and Input.is_action_pressed("perspective"):
 		tird_person_setup(interface.get_global_mouse_position())
 		
 	if event is InputEventScreenTouch:
@@ -86,7 +86,7 @@ func _input(event: InputEvent) -> void:
 			if Knob.is_pressed() and knob_finger_index == -1:
 				knob_finger_index = touch_event.index
 				knob_drag_from = touch_event.position
-			if TouchScreenCamControl.is_pressed() and touch_cam_index == -1:
+			elif TouchScreenCamControl.is_pressed() and touch_cam_index == -1:
 				touch_cam_index = touch_event.index
 				perspective_from = touch_event.position
 				perspective_in_rotate = true
@@ -102,12 +102,13 @@ func _input(event: InputEvent) -> void:
 				TouchPosition.hide()
 				perspective_rad = self.global_rotation.y
 				perspective_size = player_camera.size
+				perspective_from = Vector2.ZERO
 				perspective_in_rotate = false
 	if event is InputEventScreenDrag:
 		var drag_event: InputEventScreenDrag = event
 		if drag_event.index == knob_finger_index:
 			knob_drag_velocity = drag_event.position - knob_drag_from
-		if drag_event.index == touch_cam_index:
+		elif drag_event.index == touch_cam_index:
 			tird_person_setup(drag_event.position)
 			TouchPosition.position = drag_event.position - (TouchPosition.size / 2)
 		
