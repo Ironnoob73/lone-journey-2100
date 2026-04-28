@@ -75,6 +75,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 0
 
 [node name="TopPanel" type="PanelContainer" parent="Interface/VBoxContainer" unique_id=21859286]
 custom_minimum_size = Vector2(0, 250)
@@ -90,7 +91,7 @@ expand_mode = 1
 shape = SubResource("RectangleShape2D_jumf5")
 
 [node name="BottomPanel" type="Panel" parent="Interface/VBoxContainer" unique_id=1027950129]
-custom_minimum_size = Vector2(0, 300)
+custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
 
 [node name="MovePad" type="Control" parent="Interface/VBoxContainer/BottomPanel" unique_id=1445859976]
@@ -98,6 +99,7 @@ layout_mode = 1
 anchors_preset = 0
 
 [node name="Knob" type="TouchScreenButton" parent="Interface/VBoxContainer/BottomPanel/MovePad" unique_id=1799164051]
+position = Vector2(32, 0)
 texture_normal = SubResource("GradientTexture2D_ah03f")
 shape = SubResource("CircleShape2D_jumf5")
 
@@ -109,7 +111,7 @@ anchor_right = 1.0
 grow_horizontal = 0
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Interface/VBoxContainer/BottomPanel/ActionPad" unique_id=651657978]
-position = Vector2(-128, 0)
+position = Vector2(-170, 0)
 texture_normal = SubResource("GradientTexture2D_ah03f")
 shape = SubResource("CircleShape2D_16d5g")
 action = "ui_accept"
