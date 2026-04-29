@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AsciiTile" format=3 uid="uid://q7cx4tdkpqid"]
+
+[ext_resource type="Texture2D" uid="uid://b5djj7jcjdrm7" path="res://resources/tiles/demo/tiles/tile_0003.png" id="1_ftcly"]
+[ext_resource type="Script" uid="uid://7x3d3hx75rv6" path="res://assets/map_generator/demo/demo_tile.gd" id="1_xixqk"]
+
+[resource]
+script = ExtResource("1_xixqk")
+appearance = ExtResource("1_ftcly")
+up = Array[String](["road"])
+right = Array[String](["road"])
+down = Array[String](["road"])
+metadata/_custom_type_script = "uid://7x3d3hx75rv6"

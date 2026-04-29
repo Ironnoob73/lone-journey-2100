@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://clowv1kp5uqof"]
+
+[ext_resource type="Script" uid="uid://j2xnqnfgtf17" path="res://assets/map_generator/demo/demo_tile_generator.gd" id="1_g6dq2"]
+[ext_resource type="Script" uid="uid://7x3d3hx75rv6" path="res://assets/map_generator/demo/demo_tile.gd" id="2_8nodv"]
+[ext_resource type="Resource" uid="uid://8cj4ahnoqrbv" path="res://resources/tiles/demo/cross_road.tres" id="3_po0mc"]
+[ext_resource type="Resource" uid="uid://c8d4lra1mm31d" path="res://resources/tiles/demo/down_left_road.tres" id="4_kxy0m"]
+[ext_resource type="Resource" uid="uid://q7qbkpg37yhe" path="res://resources/tiles/demo/down_right_road.tres" id="5_od0ug"]
+[ext_resource type="Resource" uid="uid://bi1022pxfjg42" path="res://resources/tiles/demo/empty.tres" id="6_hp30u"]
+[ext_resource type="Resource" uid="uid://j75fqns56lew" path="res://resources/tiles/demo/horizontal_down_road.tres" id="7_g57ol"]
+[ext_resource type="Resource" uid="uid://b1ig5y5gtmyxr" path="res://resources/tiles/demo/horizontal_road.tres" id="8_s8814"]
+[ext_resource type="Resource" uid="uid://botvys3q1x5sq" path="res://resources/tiles/demo/horizontal_up_road.tres" id="9_gvfuv"]
+[ext_resource type="Resource" uid="uid://brfsd1l1va8it" path="res://resources/tiles/demo/up_left_road.tres" id="10_y1686"]
+[ext_resource type="Resource" uid="uid://bppn1552gq0e1" path="res://resources/tiles/demo/up_right_road.tres" id="11_606ba"]
+[ext_resource type="Resource" uid="uid://bty5crpa5pbi2" path="res://resources/tiles/demo/vertical_left_road.tres" id="12_p2c0i"]
+[ext_resource type="Resource" uid="uid://q7cx4tdkpqid" path="res://resources/tiles/demo/vertical_right_road.tres" id="13_loa2d"]
+[ext_resource type="Resource" uid="uid://m0fs4lpdvq83" path="res://resources/tiles/demo/vertical_road.tres" id="14_nbnkh"]
+
+[node name="AsciiTileGenerator" type="Node2D" unique_id=559297848]
+script = ExtResource("1_g6dq2")
+tile_objects = Array[ExtResource("2_8nodv")]([ExtResource("3_po0mc"), ExtResource("4_kxy0m"), ExtResource("5_od0ug"), ExtResource("6_hp30u"), ExtResource("7_g57ol"), ExtResource("8_s8814"), ExtResource("9_gvfuv"), ExtResource("10_y1686"), ExtResource("11_606ba"), ExtResource("12_p2c0i"), ExtResource("13_loa2d"), ExtResource("14_nbnkh")])
