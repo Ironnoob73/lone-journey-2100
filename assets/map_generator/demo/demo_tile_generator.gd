@@ -1,5 +1,8 @@
 extends Node2D
 
+## Source: https://github.com/GarnetKane99/WaveFunctionCollapse/tree/main
+## Tile image from: https://kenney.nl/assets/minimap-pack
+
 @export var length: int = 16
 @export var height: int = 16
 @export var tile_objects: Array[DemoTile]
