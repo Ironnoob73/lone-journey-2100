@@ -6,8 +6,11 @@ extends Node2D
 @export var length: int = 16
 @export var height: int = 16
 @export var tile_objects: Array[DemoTile]
+@export var failed_tile: DemoTile
 var grid_components: Array[DemoCell]
 var iterations: int = 0
+
+@onready var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	for y in height:
@@ -17,6 +20,7 @@ func _ready() -> void:
 			new_cell.scale *= 5
 			new_cell.position = Vector2(x * 40, y * 40) + Vector2(40, 40)
 			new_cell.tile_options.append_array(tile_objects)
+			new_cell.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC
 			grid_components.append(new_cell)
 	check_entropy()
 
@@ -28,7 +32,7 @@ func check_entropy() -> void:
 	#print(temp_grid.size())
 	temp_grid.sort_custom(
 		func(a: DemoCell, b: DemoCell) -> bool:
-			return a.tile_options.size() - b.tile_options.size() < 0
+			return calculate_entropy_value(a) - calculate_entropy_value(b) < 0
 	)
 	var arr_length: int = temp_grid[0].tile_options.size()
 	#print(arr_length)
@@ -39,14 +43,30 @@ func check_entropy() -> void:
 			break
 	if stop_index > 0:
 		temp_grid.resize(stop_index)
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.01).timeout
 	collapse_cell(temp_grid)
 
+func calculate_entropy_value(cell: DemoCell) -> float:
+	var denominator: float = 0
+	for option in cell.tile_options:
+		denominator += option.weight
+	var entropy_value: float = 0
+	for option in cell.tile_options:
+		entropy_value -= (option.weight / denominator) * log(option.weight / denominator) / log(2)
+	return entropy_value
+
 func collapse_cell(temp_grid_components: Array[DemoCell]) -> void:
-	var rand_index: int = randi_range(0, temp_grid_components.size() - 1)
+	var rand_index: int = rng.randi_range(0, temp_grid_components.size() - 1)
 	var cell_to_collapse: DemoCell = temp_grid_components[rand_index]
 	cell_to_collapse.collapsed = true
-	var selected_tile: DemoTile = cell_to_collapse.tile_options[randi_range(0, cell_to_collapse.tile_options.size() - 1)]
+	var selected_tile: DemoTile
+	if cell_to_collapse.tile_options.size() == 0:
+		selected_tile = failed_tile
+	else:
+		var weights: Array[float]
+		for option in cell_to_collapse.tile_options:
+			weights.append(option.weight)
+		selected_tile = cell_to_collapse.tile_options[rng.rand_weighted(weights)]
 	cell_to_collapse.tile_options.clear()
 	cell_to_collapse.tile_options.append(selected_tile)
 	cell_to_collapse.texture = selected_tile.appearance
@@ -70,14 +90,20 @@ func update_generation() -> void:
 							for possible_option in tile_objects:
 								if (possible_option.up.size() == 0
 								and not valid_options.has(possible_option)):
-									valid_options.append(possible_option)
+									#valid_options.append(possible_option)
+									if possible_option.family == listed_option.family:
+										valid_options.append(possible_option)
 						else:
 							for plug in listed_option.down:
 								for possible_option in tile_objects:
 									if (possible_option.up.size() != 0 
 									and possible_option.up.has(plug) 
 									and not valid_options.has(possible_option)):
-										valid_options.append(possible_option)
+										#valid_options.append(possible_option)
+										if plug == listed_option.family and possible_option.family == listed_option.family:
+											valid_options.append(possible_option)
+										if plug != listed_option.family and possible_option.family != listed_option.family:
+											valid_options.append(possible_option)
 					options = check_validity(options, valid_options)
 				# update below
 				if y < height - 1:
@@ -88,14 +114,20 @@ func update_generation() -> void:
 							for possible_option in tile_objects:
 								if (possible_option.down.size() == 0
 								and not valid_options.has(possible_option)):
-									valid_options.append(possible_option)
+									#valid_options.append(possible_option)
+									if possible_option.family == listed_option.family:
+										valid_options.append(possible_option)
 						else:
 							for plug in listed_option.up:
 								for possible_option in tile_objects:
 									if (possible_option.down.size() != 0 
 									and possible_option.down.has(plug) 
 									and not valid_options.has(possible_option)):
-										valid_options.append(possible_option)
+										#valid_options.append(possible_option)
+										if plug == listed_option.family and possible_option.family == listed_option.family:
+											valid_options.append(possible_option)
+										if plug != listed_option.family and possible_option.family != listed_option.family:
+											valid_options.append(possible_option)
 					options = check_validity(options, valid_options)
 				# update left
 				if x > 0:
@@ -106,14 +138,20 @@ func update_generation() -> void:
 							for possible_option in tile_objects:
 								if (possible_option.left.size() == 0
 								and not valid_options.has(possible_option)):
-									valid_options.append(possible_option)
+									#valid_options.append(possible_option)
+									if possible_option.family == listed_option.family:
+										valid_options.append(possible_option)
 						else:
 							for plug in listed_option.right:
 								for possible_option in tile_objects:
 									if (possible_option.left.size() != 0 
 									and possible_option.left.has(plug) 
 									and not valid_options.has(possible_option)):
-										valid_options.append(possible_option)
+										#valid_options.append(possible_option)
+										if plug == listed_option.family and possible_option.family == listed_option.family:
+											valid_options.append(possible_option)
+										if plug != listed_option.family and possible_option.family != listed_option.family:
+											valid_options.append(possible_option)
 					options = check_validity(options, valid_options)
 				# update right
 				if x < length - 1:
@@ -124,14 +162,20 @@ func update_generation() -> void:
 							for possible_option in tile_objects:
 								if (possible_option.right.size() == 0
 								and not valid_options.has(possible_option)):
-									valid_options.append(possible_option)
+									#valid_options.append(possible_option)
+									if possible_option.family == listed_option.family:
+										valid_options.append(possible_option)
 						else:
 							for plug in listed_option.left:
 								for possible_option in tile_objects:
 									if (possible_option.right.size() != 0 
 									and possible_option.right.has(plug) 
 									and not valid_options.has(possible_option)):
-										valid_options.append(possible_option)
+										#valid_options.append(possible_option)
+										if plug == listed_option.family and possible_option.family == listed_option.family:
+											valid_options.append(possible_option)
+										if plug != listed_option.family and possible_option.family != listed_option.family:
+											valid_options.append(possible_option)
 					options = check_validity(options, valid_options)
 				#print(options.size())
 				new_generation_cell[index].tile_options = options.duplicate()

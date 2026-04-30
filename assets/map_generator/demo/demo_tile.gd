@@ -2,6 +2,7 @@ class_name DemoTile extends Resource
 
 @export var appearance: Texture2D
 @export var weight: float = 1.0
+@export var family: String
 @export_group("neighbor")
 @export var up: Array[String]
 @export var left: Array[String]

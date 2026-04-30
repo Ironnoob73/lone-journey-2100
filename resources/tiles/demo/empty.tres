@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="AsciiTile" format=3 uid="uid://bi1022pxfjg42"]
-
-[ext_resource type="Texture2D" uid="uid://cqgjokr5glcdp" path="res://resources/tiles/demo/tiles/tile_0014.png" id="1_ooneb"]
-[ext_resource type="Script" uid="uid://7x3d3hx75rv6" path="res://assets/map_generator/demo/demo_tile.gd" id="1_r6aq4"]
-
-[resource]
-script = ExtResource("1_r6aq4")
-appearance = ExtResource("1_ooneb")
-metadata/_custom_type_script = "uid://7x3d3hx75rv6"

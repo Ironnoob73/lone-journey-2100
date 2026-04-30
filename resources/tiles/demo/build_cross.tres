@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DemoTile" format=3 uid="uid://cgyiv866rq5g1"]
+
+[ext_resource type="Script" uid="uid://7x3d3hx75rv6" path="res://assets/map_generator/demo/demo_tile.gd" id="1_ecqta"]
+[ext_resource type="Texture2D" uid="uid://boo0hsq0xftxe" path="res://resources/tiles/demo/tiles/e/tile_0006.png" id="1_gv2o7"]
+
+[resource]
+script = ExtResource("1_ecqta")
+appearance = ExtResource("1_gv2o7")
+family = "build"
+metadata/_custom_type_script = "uid://7x3d3hx75rv6"
