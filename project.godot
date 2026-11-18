@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="LoneJourney2100"
+config/name="ProjectRuinfall"
 run/main_scene="uid://spmhvrqq5mql"
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.7", "Mobile")
 run/flush_stdout_on_print.debug=false
 config/icon="res://icon.svg"
 
