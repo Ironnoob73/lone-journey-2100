@@ -42,11 +42,275 @@ height = 0.4
 radial_segments = 4
 rings = 1
 
+[sub_resource type="Animation" id="Animation_tik23"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.6, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeftArm:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.125, 0.6, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LeftArm:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.17453292)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RightArm:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.125, 0.6, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("RightArm:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.17453292)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Head/HeadMesh/Face:material_override:uv1_offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.125, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lxacm"]
+resource_name = "blink"
+length = 5.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/HeadMesh/Face:material_override:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector3(0.125, 0, 0), Vector3(0.125, 0.125, 0), Vector3(0.125, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nvsxg"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, -3, 1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0), Vector3(0, 0.525, 0), Vector3(0, 0.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(2, 2, 0.2),
+"update": 0,
+"values": [Vector3(0, 0.6, 0), Vector3(0, 0.61, 0), Vector3(0, 0.6, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LeftArm:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.125, 0.6, 0), Vector3(0.125, 0.61, 0), Vector3(0.125, 0.6, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeftArm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.7, 1.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.17453292), Vector3(0, 0, 0.13962634), Vector3(0, 0, 0.19198622), Vector3(0, 0, 0.17418385)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RightArm:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.125, 0.6, 0), Vector3(-0.125, 0.61, 0), Vector3(-0.125, 0.6, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RightArm:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.17453292), Vector3(0, 0, -0.15707964), Vector3(0, 0, -0.19198622), Vector3(0, 0, -0.17453292)]
+}
+
+[sub_resource type="Animation" id="Animation_wvpp3"]
+resource_name = "look_around"
+length = 10.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4, 5, 7, 8),
+"transitions": PackedFloat32Array(1, -3, -3, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.5235988, 0), Vector3(0, 0.5235988, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/HeadMesh/Face:material_override:uv1_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 4.25, 5.75, 6.25, 7.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector3(0.125, 0, 0), Vector3(0.125, 0, 0), Vector3(0, 0, 0), Vector3(0.125, 0, 0), Vector3(0.25, 0, 0), Vector3(0.125, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tik23"]
+_data = {
+&"RESET": SubResource("Animation_tik23"),
+&"blink": SubResource("Animation_lxacm"),
+&"idle": SubResource("Animation_nvsxg"),
+&"look_around": SubResource("Animation_wvpp3")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sovmr"]
+animation = &"blink"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_jlmes"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lxacm"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eapd6"]
+animation = &"look_around"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_sovmr"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nvsxg"]
+graph_offset = Vector2(-468.9081, 201.58243)
+nodes/output/position = Vector2(540, 140)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_lxacm")
+nodes/Idle/position = Vector2(-40, 80)
+nodes/LookAroundAdd/node = SubResource("AnimationNodeAdd2_sovmr")
+nodes/LookAroundAdd/position = Vector2(120, 140)
+nodes/LookAround/node = SubResource("AnimationNodeAnimation_eapd6")
+nodes/LookAround/position = Vector2(-40, 260)
+nodes/BlinkAdd/node = SubResource("AnimationNodeAdd2_jlmes")
+nodes/BlinkAdd/position = Vector2(340, 140)
+nodes/Blink/node = SubResource("AnimationNodeAnimation_sovmr")
+nodes/Blink/position = Vector2(140, 400)
+node_connections = [&"output", 0, &"BlinkAdd", &"LookAroundAdd", 0, &"Idle", &"LookAroundAdd", 1, &"LookAround", &"BlinkAdd", 0, &"LookAroundAdd", &"BlinkAdd", 1, &"Blink"]
+
 [node name="Character" type="Node3D" unique_id=173466900]
 script = ExtResource("1_nvsxg")
 
-[node name="BodyMesh" type="MeshInstance3D" parent="." unique_id=197658527]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45580357, 0)
+[node name="Body" type="Node3D" parent="." unique_id=1434423200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="BodyMesh" type="MeshInstance3D" parent="Body" unique_id=197658527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 material_override = ExtResource("2_rfqar")
 mesh = SubResource("CylinderMesh_3xd07")
 
@@ -62,7 +326,7 @@ head_radius = 0.2
 spherical_expansion = 0.3
 
 [node name="Face" type="MeshInstance3D" parent="Head/HeadMesh" unique_id=268937901]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.201)
 material_override = SubResource("StandardMaterial3D_tik23")
 mesh = SubResource("QuadMesh_3xd07")
 
@@ -97,3 +361,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07, 0.3, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 material_override = ExtResource("2_rfqar")
 mesh = SubResource("CapsuleMesh_3xd07")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=361430432]
+libraries/ = SubResource("AnimationLibrary_tik23")
+autoplay = &"idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=720985676]
+tree_root = SubResource("AnimationNodeBlendTree_nvsxg")
+anim_player = NodePath("../AnimationPlayer")
+parameters/LookAroundAdd/add_amount = 1.0
+parameters/BlinkAdd/add_amount = 1.0
