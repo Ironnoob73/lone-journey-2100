@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4xp7hn21m2py"]
 
-[ext_resource type="Script" uid="uid://b0wiieau6vxpv" path="res://assets/player.gd" id="1_av2a1"]
-[ext_resource type="Material" uid="uid://1kmv4yt2cnhn" path="res://resources/materials/toon_white.tres" id="2_jumf5"]
+[ext_resource type="Script" uid="uid://b0wiieau6vxpv" path="res://assets/player.gd" id="1_3mip4"]
+[ext_resource type="Material" uid="uid://1kmv4yt2cnhn" path="res://resources/materials/toon_white.tres" id="2_insbl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jumf5"]
 
@@ -43,11 +43,11 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.9, 0.9)
 
 [node name="Player" type="CharacterBody3D" unique_id=1585009135]
-script = ExtResource("1_av2a1")
+script = ExtResource("1_3mip4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=848317259]
 mesh = SubResource("CapsuleMesh_jumf5")
-surface_material_override/0 = ExtResource("2_jumf5")
+surface_material_override/0 = ExtResource("2_insbl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=313442845]
 shape = SubResource("CapsuleShape3D_16d5g")

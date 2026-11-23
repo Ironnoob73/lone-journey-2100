@@ -1,0 +1,40 @@
+[gd_scene format=4 uid="uid://pebrg1eldheb"]
+
+[ext_resource type="PackedScene" uid="uid://dkxvkawyho8b3" path="res://assets/character/head/scene.tscn" id="1_dbrvq"]
+[ext_resource type="Material" uid="uid://1kmv4yt2cnhn" path="res://resources/materials/toon_white.tres" id="2_rfqar"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3xd07"]
+top_radius = 0.2
+bottom_radius = 0.25
+height = 0.5
+radial_segments = 8
+rings = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dbrvq"]
+resource_name = "LowPolyHead"
+_surfaces = [{
+"aabb": AABB(-0.25, -0.25, -0.25, 0.5, 0.5, 0.5),
+"format": 34359742471,
+"index_count": 324,
+"index_data": PackedByteArray("AAACAAEAAAADAAIAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYAAQAJAAgAAQACAAkAAgAKAAkAAgAEAAoABAALAAoABAAGAAsACAANAAwACAAJAA0ACQAOAA0ACQAKAA4ACgAPAA4ACgALAA8AEAASABEAEAATABIAEwAUABIAEwAVABQAFQAWABQAFQAXABYAEQAZABgAEQASABkAEgAaABkAEgAUABoAFAAbABoAFAAWABsAGAAdABwAGAAZAB0AGQAeAB0AGQAaAB4AGgAfAB4AGgAbAB8AFwAgABYAFwAhACAAIQAiACAAIQAjACIAIwANACIAIwAMAA0AFgAkABsAFgAgACQAIAAlACQAIAAiACUAIgAOACUAIgANAA4AGwAmAB8AGwAkACYAJAAnACYAJAAlACcAJQAPACcAJQAOAA8AEAApACgAEAARACkAEQAqACkAEQAYACoAGAArACoAGAAcACsAKAAtACwAKAApAC0AKQAuAC0AKQAqAC4AKgAvAC4AKgArAC8ALAADAAAALAAtAAMALQAFAAMALQAuAAUALgAHAAUALgAvAAcAHAAwACsAHAAdADAAHQAxADAAHQAeADEAHgAmADEAHgAfACYAKwAyAC8AKwAwADIAMAAzADIAMAAxADMAMQAnADMAMQAmACcALwAGAAcALwAyAAYAMgALAAYAMgAzAAsAMwAPAAsAMwAnAA8AEAA0ABMAEAAoADQAKAA1ADQAKAAsADUALAABADUALAAAAAEAEwA2ABUAEwA0ADYANAA3ADYANAA1ADcANQAIADcANQABAAgAFQAhABcAFQA2ACEANgAjACEANgA3ACMANwAMACMANwAIAAwA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("AACAPgAAgL4AAIC+AACAPquqqr0AAIC+AACAPquqqr2rqqq9AACAPgAAgL6rqqq9AACAPquqqr2rqqo9AACAPgAAgL6rqqo9AACAPquqqr0AAIA+AACAPgAAgL4AAIA+AACAPquqqj0AAIC+AACAPquqqj2rqqq9AACAPquqqj2rqqo9AACAPquqqj0AAIA+AACAPgAAgD4AAIC+AACAPgAAgD6rqqq9AACAPgAAgD6rqqo9AACAPgAAgD4AAIA+AACAvgAAgL4AAIC+AACAvgAAgL6rqqq9AACAvquqqr2rqqq9AACAvquqqr0AAIC+AACAvquqqj2rqqq9AACAvquqqj0AAIC+AACAvgAAgD6rqqq9AACAvgAAgD4AAIC+AACAvgAAgL6rqqo9AACAvquqqr2rqqo9AACAvquqqj2rqqo9AACAvgAAgD6rqqo9AACAvgAAgL4AAIA+AACAvquqqr0AAIA+AACAvquqqj0AAIA+AACAvgAAgD4AAIA+q6qqvQAAgD6rqqq9q6qqvQAAgD4AAIC+q6qqPQAAgD6rqqq9q6qqPQAAgD4AAIC+q6qqvQAAgD6rqqo9q6qqPQAAgD6rqqo9q6qqvQAAgD4AAIA+q6qqPQAAgD4AAIA+q6qqvQAAgL4AAIC+q6qqvQAAgL6rqqq9q6qqvQAAgL6rqqo9q6qqvQAAgL4AAIA+q6qqPQAAgL4AAIC+q6qqPQAAgL6rqqq9q6qqPQAAgL6rqqo9q6qqPQAAgL4AAIA+q6qqvauqqr0AAIA+q6qqvauqqj0AAIA+q6qqPauqqr0AAIA+q6qqPauqqj0AAIA+q6qqvauqqr0AAIC+q6qqPauqqr0AAIC+q6qqvauqqj0AAIC+q6qqPauqqj0AAIC+/9//PziOqqr///+/qqqpqv///3//f/+//7//P1RVqar///9//3//v/+//z9UVamq/7//f1RVqar/n/8/qiqNo////7+qqqmq////f/9//7////9//3//v/+//39UVamq/9//3zKzzIz/v/+/VFVU1f+//79UVVTVqqqqqv8//7+qKqoq/z//v/8//z9UVVTVAAD/f/9//78AAP+/VFWpqgAA/3//f/+/AAD/v1RVqar/P/+/VFWpqv8//9+qKo2j/z//P1RVVNUAAP9//3//vwAA/3//f/+//z//v1RVqar/X/9fMrPMjP8//3+qqqmq/z//f6qqqar/P/+fOI6qqv9///8AAP+//7///6oqVJX/f///AAD/v/+///+qKlSV/3///wAA/7//f///AAD/v/9//79UVamq/3//v1RVqar/vwAAVFWpqv9/AAAAAP+//38AAAAA/7//f/8/qipUlf+/AABUVamq/38AAAAA/7//fwAAAAD/v/9//z+qKlSV/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID//////38AgP//////fwCA//////9/AID//////38AgA==")
+}]
+
+[node name="Character" type="Node3D" unique_id=173466900]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="." unique_id=197658527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("2_rfqar")
+mesh = SubResource("CylinderMesh_3xd07")
+
+[node name="Head" type="Node3D" parent="BodyMesh" unique_id=1437023919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="HeadMesh" parent="BodyMesh/Head" unique_id=1103717568 instance=ExtResource("1_dbrvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = SubResource("ArrayMesh_dbrvq")
+cube_ratio = 1.0
+bevel_width = 0.0
