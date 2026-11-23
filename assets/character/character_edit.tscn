@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dl06r17rvk6xf"]
+
+[ext_resource type="Script" uid="uid://c230ancvtjixx" path="res://assets/character/character_edit.gd" id="1_71uau"]
+[ext_resource type="PackedScene" uid="uid://pebrg1eldheb" path="res://assets/character/character.tscn" id="1_cgfw0"]
+
+[sub_resource type="Environment" id="Environment_3xd07"]
+
+[node name="CharacterEdit" type="Node3D" unique_id=1746024413]
+script = ExtResource("1_71uau")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1977969104]
+environment = SubResource("Environment_3xd07")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=393595448]
+transform = Transform3D(1, 0, 0, 0, 0.34645241, 0.93806756, 0, -0.93806756, 0.34645241, 0, 0, 0)
+
+[node name="Character" parent="." unique_id=173466900 instance=ExtResource("1_cgfw0")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1261749552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10139251, 2.112954)
+projection = 1
+size = 2.869
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=739577549]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HeadCubeRatioSlider" type="HSlider" parent="VBoxContainer" unique_id=1495248526]
+layout_mode = 2
+size_flags_vertical = 2
+max_value = 1.0
+step = 0.01
+
+[node name="HeadBevelWidthSlider" type="HSlider" parent="VBoxContainer" unique_id=426930231]
+layout_mode = 2
+size_flags_vertical = 2
+max_value = 0.5
+step = 0.01
+
+[node name="RotationSlider" type="HSlider" parent="VBoxContainer" unique_id=1375592839]
+layout_mode = 2
+min_value = -180.0
+max_value = 180.0
+
+[connection signal="value_changed" from="VBoxContainer/HeadCubeRatioSlider" to="." method="_on_head_cube_ratio_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HeadBevelWidthSlider" to="." method="_on_head_bevel_width_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/RotationSlider" to="." method="_on_rotation_changed"]

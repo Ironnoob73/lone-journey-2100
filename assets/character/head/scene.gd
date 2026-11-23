@@ -1,4 +1,5 @@
 @tool
+class_name HeadMesh
 extends MeshInstance3D
 
 ## 低多边形头颅网格：球体 ↔ 带倒角的正立方体。
@@ -85,9 +86,17 @@ class BevelBuilder:
 		_rebuild()
 
 ## 头颅半径（整体缩放）。
-@export_range(0.05, 2.0, 0.01, "suffix:m") var head_radius: float = 0.5:
+@export_range(0.05, 2.0, 0.01, "suffix:m") var head_radius: float = 0.25:
 	set(value):
 		head_radius = maxf(value, 0.001)
+		_rebuild()
+		
+## 球体膨胀
+## 半径相等的情况下球体要比立方体看起来更小，故需要额外放大。
+## By: LD_Anvil
+@export_range(0.05, 2.0, 0.01, "suffix:m") var spherical_expansion: float = 0.15:
+	set(value):
+		spherical_expansion = maxf(value, 0.001)
 		_rebuild()
 
 ## true = 平面着色（低多边形棱面）；false = 平滑着色。
@@ -316,7 +325,7 @@ func _build_smooth_surface(head_mesh: ArrayMesh, data: BevelBuilder) -> void:
 ## 立方体切角位置 -> 球体/立方体混合后的最终位置。
 func _shape_point(beveled: Vector3) -> Vector3:
 	var sphere := beveled.normalized()
-	return sphere.lerp(beveled, cube_ratio) * head_radius
+	return sphere.lerp(beveled, cube_ratio) * get_actual_radius()
 
 
 ## 追加一个平面着色三角形。输入三点；输出时反转成 Godot 使用的顺时针正面顺序，
@@ -363,3 +372,9 @@ func _append_smooth_triangle(accumulated: PackedVector3Array, indices: PackedInt
 	indices.push_back(ia)
 	indices.push_back(ic)
 	indices.push_back(ib)
+
+
+## 实际半径，见[member HeadMesh.spherical_expansion]
+## By: LD_Anvil
+func get_actual_radius() -> float:
+	return head_radius + (head_radius * (1 - cube_ratio) * spherical_expansion) + (head_radius * cube_ratio * bevel_width * 0.1)
