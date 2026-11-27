@@ -1,8 +1,210 @@
 [gd_resource type="Theme" format=3 uid="uid://rgjs44g45ell"]
 
+[ext_resource type="Texture2D" uid="uid://ccpx4pdmsc4lr" path="res://resources/interface/theme/windows_base.png" id="1_rnuri"]
+[ext_resource type="Texture2D" uid="uid://blgcttaowpy35" path="res://resources/interface/theme/windows_button.png" id="1_u6bd3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56kcg"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 0, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8gay"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 0, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjbc7"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 0, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bhsec"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 0, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bnpeg"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 0, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21dc8"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 32, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t8gay"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrlyx"]
+texture = SubResource("CompressedTexture2D_t8gay")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 32, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hksvh"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 32, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bnpeg"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxnmu"]
+texture = SubResource("CompressedTexture2D_bnpeg")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 32, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vga5a"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 32, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u6bd3"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v4h6f"]
+texture = SubResource("CompressedTexture2D_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 64, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vga5a"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uppwj"]
+texture = SubResource("CompressedTexture2D_vga5a")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 64, 48, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wr50e"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3aibt"]
+texture = SubResource("CompressedTexture2D_wr50e")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 64, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qwtvr"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t1y05"]
+texture = SubResource("CompressedTexture2D_qwtvr")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 64, 48, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dx1wi"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q61el"]
+texture = SubResource("CompressedTexture2D_dx1wi")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 64, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wr50e"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 96, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3aibt"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwtvr"]
+texture = SubResource("CompressedTexture2D_3aibt")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 96, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dx1wi"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 96, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q61el"]
+load_path = "res://.godot/imported/windows_button.png-56dbbd56332c49f6a257f586fa272b6c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u26ro"]
+texture = SubResource("CompressedTexture2D_q61el")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(8, 96, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nssop"]
+texture = ExtResource("1_u6bd3")
+texture_margin_left = 48.0
+expand_margin_top = 5.0
+region_rect = Rect2(64, 96, 48, 32)
+modulate_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epyx6"]
+texture = ExtResource("1_rnuri")
+texture_margin_left = 20.0
+texture_margin_top = 43.069256
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 8, 128, 120)
+
 [resource]
 BoxContainer/constants/separation = 5
+CloseButton/base_type = &"Button"
+CloseButton/styles/disabled = SubResource("StyleBoxTexture_56kcg")
+CloseButton/styles/hover = SubResource("StyleBoxTexture_t8gay")
+CloseButton/styles/hover_pressed = SubResource("StyleBoxTexture_vjbc7")
+CloseButton/styles/normal = SubResource("StyleBoxTexture_bhsec")
+CloseButton/styles/pressed = SubResource("StyleBoxTexture_bnpeg")
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.49803922)
+Label/font_sizes/font_size = 20
 MarginContainer/constants/margin_bottom = 5
 MarginContainer/constants/margin_left = 5
 MarginContainer/constants/margin_right = 5
 MarginContainer/constants/margin_top = 5
+MaxiumButton/base_type = &"Button"
+MaxiumButton/styles/disabled = SubResource("StyleBoxTexture_21dc8")
+MaxiumButton/styles/hover = SubResource("StyleBoxTexture_rrlyx")
+MaxiumButton/styles/hover_pressed = SubResource("StyleBoxTexture_hksvh")
+MaxiumButton/styles/normal = SubResource("StyleBoxTexture_bxnmu")
+MaxiumButton/styles/pressed = SubResource("StyleBoxTexture_vga5a")
+MaxiumButtonAlt/base_type = &"Button"
+MaxiumButtonAlt/styles/disabled = SubResource("StyleBoxTexture_v4h6f")
+MaxiumButtonAlt/styles/hover = SubResource("StyleBoxTexture_uppwj")
+MaxiumButtonAlt/styles/hover_pressed = SubResource("StyleBoxTexture_3aibt")
+MaxiumButtonAlt/styles/normal = SubResource("StyleBoxTexture_t1y05")
+MaxiumButtonAlt/styles/pressed = SubResource("StyleBoxTexture_q61el")
+MiniumButton/base_type = &"Button"
+MiniumButton/styles/disabled = SubResource("StyleBoxTexture_wr50e")
+MiniumButton/styles/hover = SubResource("StyleBoxTexture_qwtvr")
+MiniumButton/styles/hover_pressed = SubResource("StyleBoxTexture_dx1wi")
+MiniumButton/styles/normal = SubResource("StyleBoxTexture_u26ro")
+MiniumButton/styles/pressed = SubResource("StyleBoxTexture_nssop")
+Panel/styles/panel = SubResource("StyleBoxTexture_epyx6")

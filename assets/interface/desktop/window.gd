@@ -4,6 +4,7 @@ extends Control
 @onready var title_string: Label = $OutBorder/WindowBase/Border/VBox/TitleBar/TitleString
 
 @onready var title_drag_bar: Control = $OutBorder/WindowBase/VBox/TitleDragBar
+@onready var resizer_base: HBoxContainer = $ResizerH
 @onready var resizer_left_up: Control = $ResizerH/ResizerVL/ResizerLU
 @onready var resizer_left: Control = $ResizerH/ResizerVL/ResizerL
 @onready var resizer_left_down: Control = $ResizerH/ResizerVL/ResizerLD
@@ -11,16 +12,20 @@ extends Control
 @onready var resizer_right_up: Control = $ResizerH/ResizerVR/ResizerRU
 @onready var resizer_right: Control = $ResizerH/ResizerVR/ResizerR
 @onready var resizer_right_down: Control = $ResizerH/ResizerVR/ResizerRD
+@onready var resizer_top_base: VBoxContainer = $OutBorder/WindowBase/VBox
 @onready var resizer_top_left: Control = $OutBorder/WindowBase/VBox/ResizerTop/ResizerTL
 @onready var resizer_top_middle: Control = $OutBorder/WindowBase/VBox/ResizerTop/ResizerTM
 @onready var resizer_top_right: Control = $OutBorder/WindowBase/VBox/ResizerTop/ResizerTR
+
+@onready var maxinum_button: Button = $OutBorder/WindowBase/Border/VBox/TitleBar/MaxinumButton
 
 var is_focus: bool
 var is_dragging: Control
 var start_drag_position: Vector2i
 var mouse_start_drag_position: Vector2i
 
-var windows_size_before: Vector2i
+var window_size_before: Vector2i
+var window_pos_before: Vector2i
 
 func _ready() -> void:
 	get_window().borderless = true
@@ -49,17 +54,17 @@ func _process(_delta: float) -> void:
 		if is_dragging == title_drag_bar:
 			get_window().position = start_drag_position + (DisplayServer.mouse_get_position() - mouse_start_drag_position)
 		if is_dragging.is_in_group("resizer_left"):
-			get_window().size.x = windows_size_before.x - (DisplayServer.mouse_get_position().x - mouse_start_drag_position.x)
+			get_window().size.x = window_size_before.x - (DisplayServer.mouse_get_position().x - mouse_start_drag_position.x)
 			if get_window().size.x > get_window().min_size.x:
 				get_window().position.x = start_drag_position.x + (DisplayServer.mouse_get_position().x - mouse_start_drag_position.x)
 		if is_dragging.is_in_group("resizer_right"):
-			get_window().size.x = windows_size_before.x + (DisplayServer.mouse_get_position().x - mouse_start_drag_position.x)
+			get_window().size.x = window_size_before.x + (DisplayServer.mouse_get_position().x - mouse_start_drag_position.x)
 		if is_dragging.is_in_group("resizer_up"):
-			get_window().size.y = windows_size_before.y - (DisplayServer.mouse_get_position().y - mouse_start_drag_position.y)
+			get_window().size.y = window_size_before.y - (DisplayServer.mouse_get_position().y - mouse_start_drag_position.y)
 			if get_window().size.y > get_window().min_size.y:
 				get_window().position.y = start_drag_position.y + (DisplayServer.mouse_get_position().y - mouse_start_drag_position.y)
 		if is_dragging.is_in_group("resizer_down"):
-			get_window().size.y = windows_size_before.y + (DisplayServer.mouse_get_position().y - mouse_start_drag_position.y)
+			get_window().size.y = window_size_before.y + (DisplayServer.mouse_get_position().y - mouse_start_drag_position.y)
 		
 	title_string.text = get_window().title
 
@@ -101,6 +106,25 @@ func _on_top_right_resizer_drag_input(event: InputEvent) -> void:
 func _on_close_button_pressed() -> void:
 	get_tree().quit()
 
+func _on_minium_button_pressed() -> void:
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MINIMIZED)
+
+func _on_maxinum_button_pressed() -> void:
+	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
+		maxinum_button.theme_type_variation = "MaxiumButtonAlt"
+		window_size_before = get_window().size
+		window_pos_before = get_window().position
+		resizer_base.hide()
+		resizer_top_base.hide()
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+	elif DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_MAXIMIZED:
+		maxinum_button.theme_type_variation = "MaxiumButton"
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		get_window().size = window_size_before
+		get_window().position = window_pos_before
+		resizer_base.show()
+		resizer_top_base.show()
 
 func drag_process(event: InputEvent, node: Control) -> void:
 	if event is InputEventMouseButton:
@@ -109,7 +133,7 @@ func drag_process(event: InputEvent, node: Control) -> void:
 			if event.is_pressed():
 				is_dragging = node
 				start_drag_position = get_window().position
-				windows_size_before = get_window().size
+				window_size_before = get_window().size
 				mouse_start_drag_position = DisplayServer.mouse_get_position()
 			else:
 				is_dragging = null

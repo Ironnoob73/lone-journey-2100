@@ -132,18 +132,34 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 
+[node name="LeftSpace" type="Control" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=836327454]
+layout_mode = 2
+mouse_filter = 2
+
 [node name="TitleString" type="Label" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=39131396]
 layout_mode = 2
 text = "title"
 
-[node name="Space" type="Control" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=753316014]
+[node name="MidSpace" type="Control" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=753316014]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
+[node name="MiniumButton" type="Button" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=1011512503]
+layout_mode = 2
+theme_type_variation = &"MiniumButton"
+
+[node name="MaxinumButton" type="Button" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=169201872]
+layout_mode = 2
+theme_type_variation = &"MaxiumButton"
+
 [node name="CloseButton" type="Button" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=63947346]
 layout_mode = 2
-text = "X"
+theme_type_variation = &"CloseButton"
+
+[node name="RightSpace" type="Control" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=457082754]
+layout_mode = 2
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="OutBorder/WindowBase/Border/VBox" unique_id=338666354]
 layout_mode = 2
@@ -160,4 +176,6 @@ size_flags_vertical = 3
 [connection signal="gui_input" from="OutBorder/WindowBase/VBox/ResizerTop/ResizerTM" to="." method="_on_top_middle_resizer_drag_input"]
 [connection signal="gui_input" from="OutBorder/WindowBase/VBox/ResizerTop/ResizerTR" to="." method="_on_top_right_resizer_drag_input"]
 [connection signal="gui_input" from="OutBorder/WindowBase/VBox/TitleDragBar" to="." method="_on_title_bar_drag_input"]
+[connection signal="pressed" from="OutBorder/WindowBase/Border/VBox/TitleBar/MiniumButton" to="." method="_on_minium_button_pressed"]
+[connection signal="pressed" from="OutBorder/WindowBase/Border/VBox/TitleBar/MaxinumButton" to="." method="_on_maxinum_button_pressed"]
 [connection signal="pressed" from="OutBorder/WindowBase/Border/VBox/TitleBar/CloseButton" to="." method="_on_close_button_pressed"]
