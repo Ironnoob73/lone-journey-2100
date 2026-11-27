@@ -1,4 +1,5 @@
-extends Control
+class_name DesktopController
+extends PlayerController
 
 @onready var window_base: Panel = $OutBorder/WindowBase
 @onready var title_string: Label = $OutBorder/WindowBase/Border/VBox/TitleBar/TitleString
@@ -19,6 +20,8 @@ extends Control
 
 @onready var maxinum_button: Button = $OutBorder/WindowBase/Border/VBox/TitleBar/MaxinumButton
 
+@onready var texture_rect: TextureRect = $OutBorder/WindowBase/Border/VBox/TextureRect
+
 var is_focus: bool
 var is_dragging: Control
 var start_drag_position: Vector2i
@@ -28,6 +31,8 @@ var window_size_before: Vector2i
 var window_pos_before: Vector2i
 
 func _ready() -> void:
+	camera = texture_rect
+	
 	get_window().borderless = true
 	get_window().min_size = Vector2i(160, 90)
 	

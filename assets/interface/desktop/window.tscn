@@ -4,6 +4,11 @@
 [ext_resource type="Theme" uid="uid://c5krau0w5e6my" path="res://assets/interface/desktop/resizer_theme.tres" id="1_bhsec"]
 [ext_resource type="Script" uid="uid://vvjap3uhypif" path="res://assets/interface/desktop/window.gd" id="1_ub3hd"]
 
+[sub_resource type="Gradient" id="Gradient_bhsec"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nj3yw"]
+gradient = SubResource("Gradient_bhsec")
+
 [node name="Main" type="Control" unique_id=1715518987]
 layout_mode = 3
 anchors_preset = 15
@@ -164,6 +169,8 @@ mouse_filter = 2
 [node name="TextureRect" type="TextureRect" parent="OutBorder/WindowBase/Border/VBox" unique_id=338666354]
 layout_mode = 2
 size_flags_vertical = 3
+texture = SubResource("GradientTexture1D_nj3yw")
+expand_mode = 1
 
 [connection signal="gui_input" from="ResizerH/ResizerVL/ResizerLU" to="." method="_on_left_up_resizer_drag_input"]
 [connection signal="gui_input" from="ResizerH/ResizerVL/ResizerL" to="." method="_on_left_resizer_drag_input"]

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://8jc0wv6vyugh" path="res://assets/main.gd" id="1_2d37k"]
 [ext_resource type="PackedScene" uid="uid://4xp7hn21m2py" path="res://assets/player/player.tscn" id="1_db5cl"]
-[ext_resource type="PackedScene" uid="uid://18hfqr75j24l" path="res://assets/interface/touch_screen_vertical/controller.tscn" id="3_836ik"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bblau"]
 sky_top_color = Color(0, 0.49803922, 1, 1)
@@ -35,5 +34,3 @@ size = Vector3(10, 0.5, 10)
 
 [node name="Player" parent="." unique_id=77380048 instance=ExtResource("1_db5cl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2205132, 0)
-
-[node name="Interface" parent="." unique_id=1895765632 instance=ExtResource("3_836ik")]

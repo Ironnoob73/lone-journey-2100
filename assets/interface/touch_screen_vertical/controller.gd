@@ -1,7 +1,5 @@
-class_name PlayerController
-extends Control
-
-var player: Player
+class_name TouchScreenController
+extends PlayerController
 
 @onready var touch_screen_cam: TextureRect = $VBoxContainer/TouchScreenCam
 @onready var touch_position: TextureRect = $TouchPosition
@@ -12,9 +10,11 @@ var touch_cam_index: int = -1
 var knob_finger_index: int = -1
 var knob_drag_from: Vector2
 
+func _ready() -> void:
+	camera = touch_screen_cam
+
 func set_player(gived_player: Player) -> void:
-	player = gived_player
-	touch_screen_cam.texture = player.cam_viewport.get_texture()
+	super.set_player(gived_player)
 	
 	get_window().borderless = false
 	get_window().size = Vector2i(450, 800)
@@ -64,7 +64,6 @@ func _input(event: InputEvent) -> void:
 			touch_position.position = drag_event.position - (touch_position.size / 2)
 		
 func _physics_process(_delta: float) -> void:
-	player.cam_viewport.size = touch_screen_cam.size * (get_tree().root.size.x / touch_screen_cam.size.x)
-	touch_screen_cam_control.global_position = touch_screen_cam.global_position + (touch_screen_cam.size / 2)
+	touch_screen_cam_control.global_position = camera.global_position + (camera.size / 2)
 	var touch_cam_area: RectangleShape2D = touch_screen_cam_control.shape
 	touch_cam_area.size = touch_screen_cam.size
