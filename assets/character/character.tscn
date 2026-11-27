@@ -15,14 +15,14 @@ rings = 0
 [sub_resource type="ArrayMesh" id="ArrayMesh_nvsxg"]
 resource_name = "LowPolyHead"
 _surfaces = [{
-"aabb": AABB(-0.2002, -0.2002, -0.2002, 0.4004, 0.4004, 0.4004),
+"aabb": AABB(-0.2, -0.2, -0.2, 0.4, 0.4, 0.4),
 "format": 34359742471,
-"index_count": 564,
-"index_data": PackedByteArray("AAACAAEAAAADAAIAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYAAQAJAAgAAQACAAkAAgAKAAkAAgAEAAoABAALAAoABAAGAAsACAANAAwACAAJAA0ACQAOAA0ACQAKAA4ACgAPAA4ACgALAA8AEAASABEAEAATABIAEwAUABIAEwAVABQAFQAWABQAFQAXABYAEQAZABgAEQASABkAEgAaABkAEgAUABoAFAAbABoAFAAWABsAGAAdABwAGAAZAB0AGQAeAB0AGQAaAB4AGgAfAB4AGgAbAB8AIAAiACEAIAAjACIAIwAkACIAIwAlACQAJQAmACQAJQAnACYAIQApACgAIQAiACkAIgAqACkAIgAkACoAJAArACoAJAAmACsAKAAtACwAKAApAC0AKQAuAC0AKQAqAC4AKgAvAC4AKgArAC8AMAAyADEAMAAzADIAMwA0ADIAMwA1ADQANQA2ADQANQA3ADYAMQA5ADgAMQAyADkAMgA6ADkAMgA0ADoANAA7ADoANAA2ADsAOAA9ADwAOAA5AD0AOQA+AD0AOQA6AD4AOgA/AD4AOgA7AD8AQABCAEEAQABDAEIAQwBEAEIAQwBFAEQARQBGAEQARQBHAEYAQQBJAEgAQQBCAEkAQgBKAEkAQgBEAEoARABLAEoARABGAEsASABNAEwASABJAE0ASQBOAE0ASQBKAE4ASgBPAE4ASgBLAE8AUABSAFEAUABTAFIAUwBUAFIAUwBVAFQAVQBWAFQAVQBXAFYAUQBZAFgAUQBSAFkAUgBaAFkAUgBUAFoAVABbAFoAVABWAFsAWABdAFwAWABZAF0AWQBeAF0AWQBaAF4AWgBfAF4AWgBbAF8AMAAxAFMAMABTAFAAMQA4AFUAMQBVAFMAOAA8AFcAOABXAFUANwBBADYANwBAAEEANgBIADsANgBBAEgAOwBMAD8AOwBIAEwAIABdACMAIABcAF0AIwBeACUAIwBdAF4AJQBfACcAJQBeAF8ALAAtAEYALABGAEcALQAuAEsALQBLAEYALgAvAE8ALgBPAEsAUABRABMAUAATABAAUQBYABUAUQAVABMAWABcABcAWAAXABUAVwABAFYAVwAAAAEAVgAIAFsAVgABAAgAWwAMAF8AWwAIAAwAQAAdAEMAQAAcAB0AQwAeAEUAQwAdAB4ARQAfAEcARQAeAB8ATABNAAYATAAGAAcATQBOAAsATQALAAYATgBPAA8ATgAPAAsAEAARADMAEAAzADAAEQAYADUAEQA1ADMAGAAcADcAGAA3ADUAFwAhABYAFwAgACEAFgAoABsAFgAhACgAGwAsAB8AGwAoACwAAAA9AAMAAAA8AD0AAwA+AAUAAwA9AD4ABQA/AAcABQA+AD8ADAANACYADAAmACcADQAOACsADQArACYADgAPAC8ADgAvACsAMABQABAANwAcAEAAIAAXAFwALABHAB8APAAAAFcAPwBMAAcAJwBfAAwALwAPAE8A"),
+"index_count": 324,
+"index_data": PackedByteArray("AAACAAEAAAADAAIAAwAEAAIAAwAFAAQABQAGAAQABQAHAAYAAQAJAAgAAQACAAkAAgAKAAkAAgAEAAoABAALAAoABAAGAAsACAANAAwACAAJAA0ACQAOAA0ACQAKAA4ACgAPAA4ACgALAA8AEAASABEAEAATABIAEwAUABIAEwAVABQAFQAWABQAFQAXABYAEQAZABgAEQASABkAEgAaABkAEgAUABoAFAAbABoAFAAWABsAGAAdABwAGAAZAB0AGQAeAB0AGQAaAB4AGgAfAB4AGgAbAB8AFwAgABYAFwAhACAAIQAiACAAIQAjACIAIwANACIAIwAMAA0AFgAkABsAFgAgACQAIAAlACQAIAAiACUAIgAOACUAIgANAA4AGwAmAB8AGwAkACYAJAAnACYAJAAlACcAJQAPACcAJQAOAA8AEAApACgAEAARACkAEQAqACkAEQAYACoAGAArACoAGAAcACsAKAAtACwAKAApAC0AKQAuAC0AKQAqAC4AKgAvAC4AKgArAC8ALAADAAAALAAtAAMALQAFAAMALQAuAAUALgAHAAUALgAvAAcAHAAwACsAHAAdADAAHQAxADAAHQAeADEAHgAmADEAHgAfACYAKwAyAC8AKwAwADIAMAAzADIAMAAxADMAMQAnADMAMQAmACcALwAGAAcALwAyAAYAMgALAAYAMgAzAAsAMwAPAAsAMwAnAA8AEAA0ABMAEAAoADQAKAA1ADQAKAAsADUALAABADUALAAAAAEAEwA2ABUAEwA0ADYANAA3ADYANAA1ADcANQAIADcANQABAAgAFQAhABcAFQA2ACEANgAjACEANgA3ACMANwAMACMANwAIAAwA"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 96,
-"vertex_data": PackedByteArray("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")
+"vertex_count": 56,
+"vertex_data": PackedByteArray("zcxMPs3MTL7NzEy+zcxMPomIiL3NzEy+zcxMPomIiL2JiIi9zcxMPs3MTL6JiIi9zcxMPomIiL2JiIg9zcxMPs3MTL6JiIg9zcxMPomIiL3NzEw+zcxMPs3MTL7NzEw+zcxMPomIiD3NzEy+zcxMPomIiD2JiIi9zcxMPomIiD2JiIg9zcxMPomIiD3NzEw+zcxMPs3MTD7NzEy+zcxMPs3MTD6JiIi9zcxMPs3MTD6JiIg9zcxMPs3MTD7NzEw+zcxMvs3MTL7NzEy+zcxMvs3MTL6JiIi9zcxMvomIiL2JiIi9zcxMvomIiL3NzEy+zcxMvomIiD2JiIi9zcxMvomIiD3NzEy+zcxMvs3MTD6JiIi9zcxMvs3MTD7NzEy+zcxMvs3MTL6JiIg9zcxMvomIiL2JiIg9zcxMvomIiD2JiIg9zcxMvs3MTD6JiIg9zcxMvs3MTL7NzEw+zcxMvomIiL3NzEw+zcxMvomIiD3NzEw+zcxMvs3MTD7NzEw+iYiIvc3MTD6JiIi9iYiIvc3MTD7NzEy+iYiIPc3MTD6JiIi9iYiIPc3MTD7NzEy+iYiIvc3MTD6JiIg9iYiIPc3MTD6JiIg9iYiIvc3MTD7NzEw+iYiIPc3MTD7NzEw+iYiIvc3MTL7NzEy+iYiIvc3MTL6JiIi9iYiIvc3MTL6JiIg9iYiIvc3MTL7NzEw+iYiIPc3MTL7NzEy+iYiIPc3MTL6JiIi9iYiIPc3MTL6JiIg9iYiIPc3MTL7NzEw+iYiIvYmIiL3NzEw+iYiIvYmIiD3NzEw+iYiIPYmIiL3NzEw+iYiIPYmIiD3NzEw+iYiIvYmIiL3NzEy+iYiIPYmIiL3NzEy+iYiIvYmIiD3NzEy+iYiIPYmIiD3NzEy+/9//PziOqqr///+/qqqpqv///3//f/+//7//P1RVqar///9//3//v/+//z9UVamq/7//f1RVqar/n/8/qiqNo////7+qqqmq////f/9//7////9//3//v/+//39UVamq/9//3zKzzIz/v/+/VFVU1f+//79UVVTVqqqqqv8//7+qKqoq/z//v/8//z9UVVTVAAD/f/9//78AAP+/VFWpqgAA/3//f/+/AAD/v1RVqar/P/+/VFWpqv8//9+qKo2j/z//P1RVVNUAAP9//3//vwAA/3//f/+//z//v1RVqar/X/9fMrPMjP8//3+qqqmq/z//f6qqqar/P/+fOI6qqv9///8AAP+//7///6oqVJX/f///AAD/v/+///+qKlSV/3///wAA/7//f///AAD/v/9//79UVamq/3//v1RVqar/vwAAVFWpqv9/AAAAAP+//38AAAAA/7//f/8/qipUlf+/AABUVamq/38AAAAA/7//fwAAAAD/v/9//z+qKlSV/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID//////38AgP//////fwCA//////9/AID//////38AgA==")
 }]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tik23"]
@@ -140,6 +140,66 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector3(0.125, 0, 0)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("LeftLeg:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.07, 0.3, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("LeftLeg:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("RightLeg:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.07, 0.3, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("RightLeg:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Body:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_lxacm"]
 resource_name = "blink"
@@ -157,6 +217,118 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [Vector3(0.125, 0, 0), Vector3(0.125, 0.125, 0), Vector3(0.125, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sovmr"]
+resource_name = "fall"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.17453292, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftArm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.0471976, 0, 2.0943952)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightArm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.0471976, 0, -2.0943952)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.17453294, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LeftLeg:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.07, 0.3, 0.09)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LeftLeg:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5235988, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("RightLeg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5235988, 0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RightLeg:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.07, 0.3, 0.09)]
 }
 
 [sub_resource type="Animation" id="Animation_nvsxg"]
@@ -267,18 +439,163 @@ tracks/1/keys = {
 "values": [Vector3(0.125, 0, 0), Vector3(0.125, 0, 0), Vector3(0, 0, 0), Vector3(0.125, 0, 0), Vector3(0.25, 0, 0), Vector3(0.125, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_eapd6"]
+resource_name = "walk"
+length = 2.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftLeg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.07, 0.3, 0), Vector3(0.07, 0.29, -0.1), Vector3(0.07, 0.4, 0.075), Vector3(0.07, 0.295, 0.075)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftLeg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.17453292, 0, 0), Vector3(0, 0, 0), Vector3(-0.17453292, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightLeg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.07, 0.4, 0.075), Vector3(-0.07, 0.295, 0.075), Vector3(-0.07, 0.3, 0), Vector3(-0.07, 0.29, -0.1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("RightLeg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.17453292, 0, 0), Vector3(0, 0, 0), Vector3(0.17453292, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0), Vector3(0, 0.45, 0), Vector3(0, 0.5, 0), Vector3(0, 0.45, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.08726646, 0, 0), Vector3(0, 0, 0), Vector3(0.08726646, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LeftArm:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.125, 0.6, 0), Vector3(0.125, 0.55, 0), Vector3(0.125, 0.6, 0), Vector3(0.125, 0.55, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("LeftArm:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.17453292), Vector3(-0.2617994, 0, 0.17453292), Vector3(0, 0, 0.17453292), Vector3(0.34906584, 0, 0.17453292)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RightArm:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.125, 0.6, 0), Vector3(-0.125, 0.55, 0), Vector3(-0.125, 0.6, 0), Vector3(-0.125, 0.55, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("RightArm:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -0.17453292), Vector3(0.34906584, 0, -0.17453292), Vector3(0, 0, -0.17453292), Vector3(-0.2617994, 0, -0.17453292)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Head:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.25, 0.75, 1.25, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.6, 0), Vector3(0, 0.55, 0), Vector3(0, 0.6, 0), Vector3(0, 0.55, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tik23"]
 _data = {
 &"RESET": SubResource("Animation_tik23"),
 &"blink": SubResource("Animation_lxacm"),
+&"fall": SubResource("Animation_sovmr"),
 &"idle": SubResource("Animation_nvsxg"),
-&"look_around": SubResource("Animation_wvpp3")
+&"look_around": SubResource("Animation_wvpp3"),
+&"walk": SubResource("Animation_eapd6")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sovmr"]
 animation = &"blink"
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_jlmes"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jlmes"]
+animation = &"fall"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_qpt1x"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lxacm"]
 animation = &"idle"
@@ -288,26 +605,43 @@ animation = &"look_around"
 
 [sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_sovmr"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nvsxg"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_tik23"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_wvpp3"]
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nvsxg"]
-graph_offset = Vector2(-468.9081, 201.58243)
-nodes/output/position = Vector2(540, 140)
+graph_offset = Vector2(-213.68988, 43.174103)
+nodes/output/position = Vector2(800, 120)
 nodes/Idle/node = SubResource("AnimationNodeAnimation_lxacm")
-nodes/Idle/position = Vector2(-40, 80)
+nodes/Idle/position = Vector2(-20, 120)
 nodes/LookAroundAdd/node = SubResource("AnimationNodeAdd2_sovmr")
-nodes/LookAroundAdd/position = Vector2(120, 140)
+nodes/LookAroundAdd/position = Vector2(140, 120)
 nodes/LookAround/node = SubResource("AnimationNodeAnimation_eapd6")
-nodes/LookAround/position = Vector2(-40, 260)
+nodes/LookAround/position = Vector2(140, 380)
 nodes/BlinkAdd/node = SubResource("AnimationNodeAdd2_jlmes")
-nodes/BlinkAdd/position = Vector2(340, 140)
+nodes/BlinkAdd/position = Vector2(320, 120)
 nodes/Blink/node = SubResource("AnimationNodeAnimation_sovmr")
-nodes/Blink/position = Vector2(140, 400)
-node_connections = [&"output", 0, &"BlinkAdd", &"LookAroundAdd", 0, &"Idle", &"LookAroundAdd", 1, &"LookAround", &"BlinkAdd", 0, &"LookAroundAdd", &"BlinkAdd", 1, &"Blink"]
+nodes/Blink/position = Vector2(320, 380)
+nodes/WalkAdd/node = SubResource("AnimationNodeAdd2_tik23")
+nodes/WalkAdd/position = Vector2(480, 120)
+nodes/Walk/node = SubResource("AnimationNodeAnimation_nvsxg")
+nodes/Walk/position = Vector2(480, 380)
+nodes/WalkSpeed/node = SubResource("AnimationNodeTimeScale_wvpp3")
+nodes/WalkSpeed/position = Vector2(480, 560)
+nodes/FallAdd/node = SubResource("AnimationNodeAdd2_qpt1x")
+nodes/FallAdd/position = Vector2(640, 120)
+nodes/Fall/node = SubResource("AnimationNodeAnimation_jlmes")
+nodes/Fall/position = Vector2(640, 380)
+node_connections = [&"output", 0, &"FallAdd", &"LookAroundAdd", 0, &"Idle", &"LookAroundAdd", 1, &"LookAround", &"BlinkAdd", 0, &"LookAroundAdd", &"BlinkAdd", 1, &"Blink", &"WalkAdd", 0, &"BlinkAdd", &"WalkAdd", 1, &"WalkSpeed", &"WalkSpeed", 0, &"Walk", &"FallAdd", 0, &"WalkAdd", &"FallAdd", 1, &"Fall"]
 
 [node name="Character" type="Node3D" unique_id=173466900]
 script = ExtResource("1_nvsxg")
 
 [node name="Body" type="Node3D" parent="." unique_id=1434423200]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0.5, 0)
 
 [node name="BodyMesh" type="MeshInstance3D" parent="Body" unique_id=197658527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
@@ -321,7 +655,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 mesh = SubResource("ArrayMesh_nvsxg")
 cube_ratio = 1.0
-bevel_width = 0.01
+bevel_width = 0.0
 head_radius = 0.2
 spherical_expansion = 0.3
 
@@ -331,7 +665,7 @@ material_override = SubResource("StandardMaterial3D_tik23")
 mesh = SubResource("QuadMesh_3xd07")
 
 [node name="LeftArm" type="Node3D" parent="." unique_id=507167580]
-transform = Transform3D(0.9848077, -0.17364816, 0, 0.17364818, 0.98480767, 0, 0, 0, 0.99999994, 0.125, 0.6, 0)
+transform = Transform3D(0.98480767, -0.17364816, 0, 0.17364816, 0.9848076, 0, 0, 0, 0.99999994, 0.125, 0.6, 0)
 
 [node name="LeftArmMesh" type="MeshInstance3D" parent="LeftArm" unique_id=1682518602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
@@ -339,7 +673,7 @@ material_override = ExtResource("2_rfqar")
 mesh = SubResource("CapsuleMesh_3xd07")
 
 [node name="RightArm" type="Node3D" parent="." unique_id=2003001915]
-transform = Transform3D(0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 0, 0, 1, -0.125, 0.6, 0)
+transform = Transform3D(0.98480767, 0.17364816, 0, -0.17364816, 0.98480767, 0, 0, 0, 1, -0.125, 0.6, 0)
 
 [node name="RightArmMesh" type="MeshInstance3D" parent="RightArm" unique_id=1490000253]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
@@ -347,7 +681,7 @@ material_override = ExtResource("2_rfqar")
 mesh = SubResource("CapsuleMesh_3xd07")
 
 [node name="LeftLeg" type="Node3D" parent="." unique_id=388481964]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07, 0.3, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.07, 0.3, 0)
 
 [node name="LeftLegMesh" type="MeshInstance3D" parent="LeftLeg" unique_id=1429462317]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
@@ -371,3 +705,6 @@ tree_root = SubResource("AnimationNodeBlendTree_nvsxg")
 anim_player = NodePath("../AnimationPlayer")
 parameters/LookAroundAdd/add_amount = 1.0
 parameters/BlinkAdd/add_amount = 1.0
+parameters/WalkAdd/add_amount = 0.0
+parameters/WalkSpeed/scale = 3.0
+parameters/FallAdd/add_amount = 0.0

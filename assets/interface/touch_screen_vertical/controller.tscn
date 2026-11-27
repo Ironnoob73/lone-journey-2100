@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://18hfqr75j24l"]
+
+[ext_resource type="Script" uid="uid://b1ju6kx3fpyfl" path="res://assets/interface/touch_screen_vertical/controller.gd" id="1_p1l0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jumf5"]
+
+[sub_resource type="Gradient" id="Gradient_16d5g"]
+offsets = PackedFloat32Array(0.5, 0.7, 0.8)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ah03f"]
+gradient = SubResource("Gradient_16d5g")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.9)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jumf5"]
+radius = 55.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_16d5g"]
+radius = 55.0
+
+[sub_resource type="Gradient" id="Gradient_jumf5"]
+offsets = PackedFloat32Array(0.5, 0.7, 0.8)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_16d5g"]
+gradient = SubResource("Gradient_jumf5")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.9)
+
+[node name="Interface" type="Control" unique_id=1895765632]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p1l0s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1848212309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="TopPanel" type="PanelContainer" parent="VBoxContainer" unique_id=730334585]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="TouchScreenCam" type="TextureRect" parent="VBoxContainer" unique_id=632976286]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="TouchScreenCamControl" type="TouchScreenButton" parent="VBoxContainer/TouchScreenCam" unique_id=1258930721]
+shape = SubResource("RectangleShape2D_jumf5")
+
+[node name="BottomPanel" type="Panel" parent="VBoxContainer" unique_id=1388056462]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="MovePad" type="Control" parent="VBoxContainer/BottomPanel" unique_id=1300155115]
+layout_mode = 1
+anchors_preset = 0
+
+[node name="Knob" type="TouchScreenButton" parent="VBoxContainer/BottomPanel/MovePad" unique_id=1616496199]
+position = Vector2(32, 0)
+texture_normal = SubResource("GradientTexture2D_ah03f")
+shape = SubResource("CircleShape2D_jumf5")
+
+[node name="ActionPad" type="Control" parent="VBoxContainer/BottomPanel" unique_id=973625010]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="VBoxContainer/BottomPanel/ActionPad" unique_id=370802757]
+position = Vector2(-170, 0)
+texture_normal = SubResource("GradientTexture2D_ah03f")
+shape = SubResource("CircleShape2D_16d5g")
+action = "ui_accept"
+
+[node name="TouchPosition" type="TextureRect" parent="." unique_id=793702295]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture2D_16d5g")

@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://cy456psdilp8i"]
+
+[ext_resource type="Theme" uid="uid://rgjs44g45ell" path="res://resources/interface/theme/default_theme.tres" id="1_5x1sm"]
+[ext_resource type="Theme" uid="uid://c5krau0w5e6my" path="res://assets/interface/desktop/resizer_theme.tres" id="1_bhsec"]
+[ext_resource type="Script" uid="uid://vvjap3uhypif" path="res://assets/interface/desktop/window.gd" id="1_ub3hd"]
+
+[node name="Main" type="Control" unique_id=1715518987]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ub3hd")
+
+[node name="ResizerH" type="HBoxContainer" parent="." unique_id=1303824287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bhsec")
+
+[node name="ResizerVL" type="VBoxContainer" parent="ResizerH" unique_id=911357842]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+
+[node name="ResizerLU" type="Control" parent="ResizerH/ResizerVL" unique_id=52942145]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_default_cursor_shape = 12
+
+[node name="ResizerL" type="Control" parent="ResizerH/ResizerVL" unique_id=235711163]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 10
+
+[node name="ResizerLD" type="Control" parent="ResizerH/ResizerVL" unique_id=1426079481]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_default_cursor_shape = 11
+
+[node name="ResizerM" type="Control" parent="ResizerH" unique_id=1670452935]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 9
+
+[node name="ResizerVR" type="VBoxContainer" parent="ResizerH" unique_id=2023659990]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+
+[node name="ResizerRU" type="Control" parent="ResizerH/ResizerVR" unique_id=1550609725]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_default_cursor_shape = 11
+
+[node name="ResizerR" type="Control" parent="ResizerH/ResizerVR" unique_id=18124386]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 10
+
+[node name="ResizerRD" type="Control" parent="ResizerH/ResizerVR" unique_id=1901377560]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_default_cursor_shape = 12
+
+[node name="OutBorder" type="MarginContainer" parent="." unique_id=310006511]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="WindowBase" type="Panel" parent="OutBorder" unique_id=1788559340]
+propagate_maximum_size = true
+layout_mode = 2
+theme = ExtResource("1_5x1sm")
+
+[node name="VBox" type="VBoxContainer" parent="OutBorder/WindowBase" unique_id=1267830076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResizerTop" type="HBoxContainer" parent="OutBorder/WindowBase/VBox" unique_id=901332491]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ResizerTL" type="Control" parent="OutBorder/WindowBase/VBox/ResizerTop" unique_id=988686312]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 12
+
+[node name="ResizerTM" type="Control" parent="OutBorder/WindowBase/VBox/ResizerTop" unique_id=842866455]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 9
+
+[node name="ResizerTR" type="Control" parent="OutBorder/WindowBase/VBox/ResizerTop" unique_id=628422503]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 11
+
+[node name="TitleDragBar" type="Control" parent="OutBorder/WindowBase/VBox" unique_id=1506098474]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+mouse_default_cursor_shape = 6
+
+[node name="Border" type="MarginContainer" parent="OutBorder/WindowBase" unique_id=924858802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="OutBorder/WindowBase/Border" unique_id=149082354]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleBar" type="HBoxContainer" parent="OutBorder/WindowBase/Border/VBox" unique_id=1705445046]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleString" type="Label" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=39131396]
+layout_mode = 2
+text = "title"
+
+[node name="Space" type="Control" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=753316014]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="CloseButton" type="Button" parent="OutBorder/WindowBase/Border/VBox/TitleBar" unique_id=63947346]
+layout_mode = 2
+text = "X"
+
+[node name="TextureRect" type="TextureRect" parent="OutBorder/WindowBase/Border/VBox" unique_id=338666354]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="gui_input" from="ResizerH/ResizerVL/ResizerLU" to="." method="_on_left_up_resizer_drag_input"]
+[connection signal="gui_input" from="ResizerH/ResizerVL/ResizerL" to="." method="_on_left_resizer_drag_input"]
+[connection signal="gui_input" from="ResizerH/ResizerVL/ResizerLD" to="." method="_on_left_down_resizer_drag_input"]
+[connection signal="gui_input" from="ResizerH/ResizerM" to="." method="_on_middle_down_resizer_drag_input"]
+[connection signal="gui_input" from="ResizerH/ResizerVR/ResizerRU" to="." method="_on_right_up_resizer_drag_input"]
+[connection signal="gui_input" from="ResizerH/ResizerVR/ResizerR" to="." method="_on_right_resizer_drag_input"]
+[connection signal="gui_input" from="ResizerH/ResizerVR/ResizerRD" to="." method="_on_right_down_resizer_drag_input"]
+[connection signal="gui_input" from="OutBorder/WindowBase/VBox/ResizerTop/ResizerTL" to="." method="_on_top_left_resizer_drag_input"]
+[connection signal="gui_input" from="OutBorder/WindowBase/VBox/ResizerTop/ResizerTM" to="." method="_on_top_middle_resizer_drag_input"]
+[connection signal="gui_input" from="OutBorder/WindowBase/VBox/ResizerTop/ResizerTR" to="." method="_on_top_right_resizer_drag_input"]
+[connection signal="gui_input" from="OutBorder/WindowBase/VBox/TitleDragBar" to="." method="_on_title_bar_drag_input"]
+[connection signal="pressed" from="OutBorder/WindowBase/Border/VBox/TitleBar/CloseButton" to="." method="_on_close_button_pressed"]

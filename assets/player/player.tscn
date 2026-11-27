@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://4xp7hn21m2py"]
+
+[ext_resource type="Script" uid="uid://b0wiieau6vxpv" path="res://assets/player/player.gd" id="1_3mip4"]
+[ext_resource type="PackedScene" uid="uid://pebrg1eldheb" path="res://assets/character/character.tscn" id="2_3mip4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3xd07"]
+radius = 0.25
+height = 1.0
+
+[node name="Player" type="CharacterBody3D" unique_id=1585009135]
+script = ExtResource("1_3mip4")
+
+[node name="CharacterMesh" parent="." unique_id=173466900 instance=ExtResource("2_3mip4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=313442845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_3xd07")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=923624186]
+
+[node name="Marker3D" type="Marker3D" parent="SubViewport" unique_id=340357549]
+top_level = true
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/Marker3D" unique_id=1243910532]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 10, 10)
